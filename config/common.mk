@@ -1,4 +1,4 @@
-## Common FML Config ##
+## Common AOSP Config based on FML ##
 
 # Superuser
 # SUPERUSER_EMBEDDED := true
@@ -13,11 +13,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Boot animation
 PRODUCT_COPY_FILES += \
-	vendor/fml/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+	vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
-# FML init.rc
+# AOSP init.rc
 PRODUCT_COPY_FILES += \
-	vendor/fml/prebuilt/common/etc/init.fml.rc:root/init.fml.rc
+	vendor/aosp/prebuilt/common/etc/init.aosp.rc:root/init.aosp.rc
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -36,8 +36,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-	vendor/fml/prebuilt/common/bin/sysinit:system/bin/sysinit \
-	vendor/fml/prebuilt/common/etc/init.d/00fml:system/etc/init.d/00fml
+	vendor/aosp/prebuilt/common/bin/sysinit:system/bin/sysinit \
+	vendor/aosp/prebuilt/common/etc/init.d/00fml:system/etc/init.d/00fml
 
 PRODUCT_PACKAGES += \
 	CellBroadcastReceiver \
@@ -49,4 +49,4 @@ ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 endif
 
 # overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/fml/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/common
