@@ -49,6 +49,11 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
 
+# NTFS
+PRODUCT_PACKAGES += \
+    ntfsfix \
+    ntfs-3g
+
 # Chromium Prebuilt
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
