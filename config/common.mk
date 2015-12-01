@@ -43,6 +43,12 @@ PRODUCT_PACKAGES += \
 	CellBroadcastReceiver \
 	Launcher3
 
+# Exfat
+PRODUCT_PACKAGES += \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat
+
 # Chromium Prebuilt
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
